@@ -1,0 +1,13 @@
+{
+  "name": "miniblip-cli",
+  "description":"miniblip cli helper",
+  "version": "0.0.1",
+  "license" : "GPL-3.0",
+  "bin":{
+	"index.js"
+  },
+  "dependencies": { 
+        "commander" : ">=2.9.0", 
+	"blessed"   : ">=0.1.81"
+  }
+}

@@ -1,0 +1,201 @@
+/*
+* WEBKIT SCROLLBARS
+*/
+::-webkit-scrollbar {
+  width: 12px;  /* for vertical scrollbars */
+  height: 12px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/*
+* anim
+*/
+.anim-fast {
+  transition: all .3s ease;
+}
+
+/*
+* BODY
+*/
+body {
+  font-family: sans-serif;
+}
+
+#toolbar {
+  position: absolute;
+  width: 120px;
+  height: 100%;
+  background: #1081C7;
+  color: white;
+  text-align: center;
+
+  ul {
+    padding: 18px 0px;
+    li {
+      .anim-fast;
+	     padding: 10px 0px;
+       cursor: pointer;
+
+       i {
+         padding: 8px 0px;
+       }
+
+       p {
+         text-transform: uppercase;
+         font-size: 0.8em;
+         color: rgba(255, 255, 255, 0.75);
+       }
+
+       &:hover {
+         background-color: rgba(0, 0, 0, 0.22);
+       }
+       &.v-link-active {
+         border-right: 8px solid rgba(255, 255, 255, 0.5);
+       }
+    }
+  }
+}
+
+#main_container {
+  position: absolute;
+  left: 120px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+
+  #editor_container {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+
+    #actions {
+    	z-index: 10;
+    	position: absolute;
+    	top: 0;
+    	right: 12px;
+    	background: rgb(255, 223, 0);
+    	padding: 10px;
+    	border-radius: 0px 0px 2px 2px;
+    	box-shadow: 0px 0px 10px black;
+    	color: rgb(95, 91, 10);
+
+    	li {
+    	  	padding: 10px;
+    		&:hover {
+    			color: black;
+    		}
+    	}
+
+    }
+
+    #editor {
+      position: absolute;
+      top: 0;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+
+    }
+  }
+}
+
+
+
+#firmware-upload-section {
+
+	#action {
+	    position: fixed;
+	    bottom: 0;
+	    left: 355px;
+	    width: 425px;
+	    padding: 10px;
+	    border-radius: 2px 2px 0px 0px;
+	    display: none;
+
+		#heading {
+			font-weight: 800;
+			font-size: 2em;
+		}
+
+		#upload {
+			float: right;
+			padding: 12px;
+		}
+	}
+
+}
+
+#firmware-list {
+  float: left;
+  width: 200px;
+  background: white;
+  height: 500px;
+  font-size: 1.2em;
+
+  h1 {
+	  font-size: 1em;
+	  text-transform: uppercase;
+	  font-weight: 800;
+	  color: gray;
+	  padding: 18px 0px;
+	  text-align: center;
+  }
+
+  .item {
+	  border-bottom: 1px dotted black;
+	  padding: 11px;
+	  cursor: pointer;
+
+	.name {
+	  font-weight: bold;
+	}
+
+	.author {
+	  color: gray;
+	  font-style: italic;
+	  font-size: 0.8em;
+	}
+
+	&:hover {
+ 	 background: rgba(0, 0, 0, 0.08);
+	}
+
+	&.selected {
+ 	 background: rgba(0, 0, 0, 0.08);
+	}
+
+  }
+}
+
+#board {
+  float: left;
+  width: calc(600px);
+  height: 600px;
+  text-align: center;
+
+  img {
+	  width: 300px;
+	  opacity: 0.5;
+	  margin-top: 15%;
+  }
+
+  #info {
+	  margin-top: 10px;
+	  font-size: 1.2em;
+	  color: gray;
+  }
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events:none;
+}
